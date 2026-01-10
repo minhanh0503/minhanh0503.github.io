@@ -52,4 +52,16 @@ portfolio/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/minhanh0503/your-portfolio.git
+   [git clone https://github.com/minhanh0503/minhanh0503.github.io.git]
+2. Open index.html in your browser.
+
+That’s it — no build tools, no setup, just vibes ✨
+
+💌 Let’s Connect
+
+Email: nguyenminhanh290503@gmail.com
+
+LinkedIn: [minh-anh-nguyen](http://www.linkedin.com/in/minh-anh-nguyen-82968021a)
+
+GitHub: minhanh0503
+   
