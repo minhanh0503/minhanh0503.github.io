@@ -1,129 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Minh Nguyen | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Minh Nguyen - Computer Science student and developer focusing on backend systems, security, and machine learning."
-  />
-  <style>
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
-      background-color: #0b1120;
-      color: #e5e7eb;
-    }
-
-    .page {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
-
-    .card {
-      max-width: 700px;
-      width: 100%;
-      background: rgba(15, 23, 42, 0.9);
-      border-radius: 16px;
-      padding: 2rem 2.5rem;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-      border: 1px solid rgba(148, 163, 184, 0.3);
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.25rem;
-    }
-
-    .subtitle {
-      font-size: 0.95rem;
-      color: #9ca3af;
-      margin-bottom: 1.5rem;
-    }
-
-    p {
-      line-height: 1.6;
-      font-size: 0.98rem;
-      color: #d1d5db;
-      margin-bottom: 1rem;
-    }
-
-    .links {
-      margin-top: 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    .links a {
-      text-decoration: none;
-      font-size: 0.9rem;
-      padding: 0.6rem 1rem;
-      border-radius: 999px;
-      border: 1px solid #4b5563;
-      color: #e5e7eb;
-      transition: background 0.15s ease, border-color 0.15s ease,
-        transform 0.1s ease;
-    }
-
-    .links a:hover {
-      background: #111827;
-      border-color: #60a5fa;
-      transform: translateY(-1px);
-    }
-
-    @media (max-width: 640px) {
-      .card {
-        padding: 1.5rem 1.25rem;
-      }
-
-      h1 {
-        font-size: 1.6rem;
-      }
-    }
-  </style>
-</head>
-<body>
-  <main class="page">
-    <section class="card">
-      <h1>Minh Nguyen</h1>
-      <div class="subtitle">
-        Computer Science @ York University • Backend & Security • ML Curious
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minh Anh Nguyen Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav
+      class="fixed w-full z-50 px-6 py-4 flex justify-between items-center bg-white/30 backdrop-blur-md border-b border-white/20"
+    >
+      <div class="text-2xl font-bold gradient-text cursive">Minh Anh Nguyen</div>
+      <div class="hidden md:flex space-x-8 font-medium">
+        <a href="#home" class="nav-link hover:text-pink-500">Home</a>
+        <a href="#about" class="nav-link hover:text-pink-500">About</a>
+        <a href="#education" class="nav-link hover:text-pink-500">Education</a>
+        <a href="#projects" class="nav-link hover:text-pink-500">Projects</a>
       </div>
+      <button class="md:hidden text-2xl" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
 
-      <p>
-        Hi, I’m Minh Anh — a developer who loves understanding how systems work,
-        breaking down complex problems, and turning them into clean, dependable
-        solutions.
-      </p>
-
-      <p>
-        I’ve built secure backend services, data‑driven applications, and
-        machine‑learning projects like phishing‑email detection. I enjoy working
-        across backend systems, full‑stack features, and security‑focused
-        experiments, always with an eye on reliability and clear architecture.
-      </p>
-
-      <p>
-        This portfolio is where I share the projects I’m building, the
-        technologies I’m exploring, and the ideas I’m excited to keep learning
-        about.
-      </p>
-
-      <div class="links">
-        <a href="mailto:nguyenminhanh290503@gmail.com">Email</a>
-        <a href="https://github.com/minhanh0503" target="_blank"
-          >GitHub</a
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex flex-col justify-center items-center text-center px-4 relative"
+    >
+      <div class="z-10">
+        <div
+          class="w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-white shadow-xl overflow-hidden mb-6 mx-auto floating"
         >
-        <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
-        <a href="#projects">View Projects (coming soon)</a>
+          <!-- Using a placeholder for user's photo -->
+          <img
+            src="imgs/me.jpg"
+            alt="My Profile"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+          Hi, I'm <span class="gradient-text cursive">Minh Anh Nguyen</span> ✨
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          A passionate developer creating magical and pretty digital experiences. <br />
+          <span id="typing-text" class="text-pink-400 font-semibold"></span>
+        </p>
+        <div class="flex space-x-4 justify-center">
+          <a
+            href="#projects"
+            class="heart-btn px-8 py-3 rounded-full text-white font-semibold shadow-lg"
+            >View My Magic</a
+          >
+          <a
+            href="https://github.com/minhanh0503"
+            target="_blank"
+            class="bg-white px-8 py-3 rounded-full text-pink-400 font-semibold shadow-lg hover:shadow-xl transition"
+            >GitHub</a
+          >
+        </div>
       </div>
     </section>
-  </main>
-</body>
+
+    <!-- Interests Section -->
+    <section id="about" class="py-20 px-6 md:px-20 bg-white/50">
+      <h2 class="text-3xl font-bold text-center mb-12 gradient-text">
+        What I Love 💖
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-card p-8 text-center">
+          <div class="text-4xl mb-4">💻</div>
+          <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+          <p class="text-sm text-gray-500">
+            Crafting beautiful and functional websites using modern tech stacks.
+          </p>
+        </div>
+        <div class="glass-card p-8 text-center">
+          <div class="text-4xl mb-4">🎨</div>
+          <h3 class="text-xl font-semibold mb-2">Security</h3>
+          <p class="text-sm text-gray-500">
+            Designing and implementing secure systems to protect data and privacy.
+          </p>
+        </div>
+        <div class="glass-card p-8 text-center">
+          <div class="text-4xl mb-4">✨</div>
+          <h3 class="text-xl font-semibold mb-2">Security and AI</h3>
+          <p class="text-sm text-gray-500">
+            Exploring the intersection of artificial intelligence and cybersecurity to create smarter defenses.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Experience -->
+    <section id="education" class="py-20 px-6 md:px-20">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Education -->
+        <div>
+          <h2 class="text-3xl font-bold mb-8 gradient-text cursive">
+            My Education 🎓
+          </h2>
+          <div class="space-y-6">
+            <div class="glass-card p-6 relative overflow-hidden">
+              <div
+                class="absolute top-0 right-0 p-2 bg-pink-100 text-pink-500 rounded-bl-xl text-xs font-bold"
+              >
+                2021 - 2026(Expected)
+                <img src="imgs/YorkULogo.jpg" alt="York University" class="inline-block w-6 h-6 ml-1"/>
+              </div>
+              <h4 class="text-lg font-bold">B.S. in Computer Science</h4>
+              <p class="text-pink-500 font-medium">
+                York University, Toronto
+              </p>
+              <p class="text-sm mt-2 text-gray-600">
+                Focusing on Software Developement and Security.
+              </p>
+            </div>
+            <div class="glass-card p-6 relative">
+              <div
+                class="absolute top-0 right-0 p-2 bg-blue-100 text-blue-500 rounded-bl-xl text-xs font-bold"
+              >
+                In Progress
+              </div>
+              <!-- <h4 class="text-lg font-bold">Web Design Certification</h4>
+              <p class="text-blue-400 font-medium">Design Academy Online</p> -->
+            </div>
+            <div class="space-y-6">
+            <div class="glass-card p-6 relative overflow-hidden">
+              <div
+                class="absolute top-0 right-0 p-2 bg-pink-100 text-pink-500 rounded-bl-xl text-xs font-bold"
+              >
+                2024 - 2025
+                <img src="imgs/Cornell_Universitylogo.png" alt="Cornell University" class="inline-block w-6 h-6 ml-1"/>
+              </div>
+              <h4 class="text-lg font-bold">Certification in Cybersecurity</h4>
+              <p class="text-pink-500 font-medium">
+                Cornell University, Online
+              </p>
+              <p class="text-sm mt-2 text-gray-600">
+                Focusing on Security of a system, network, and data.
+              </p>
+            </div>
+            <div class="glass-card p-6 relative">
+              <div
+                class="absolute top-0 right-0 p-2 bg-blue-100 text-blue-500 rounded-bl-xl text-xs font-bold"
+              >
+                Completed
+              </div>
+              <!-- <h4 class="text-lg font-bold">Web Design Certification</h4>
+              <p class="text-blue-400 font-medium">Design Academy Online</p> -->
+            </div>
+          </div>
+        </div>
+        <div class="space-y-6">
+            <div class="glass-card p-6 relative overflow-hidden">
+              <div
+                class="absolute top-0 right-0 p-2 bg-pink-100 text-pink-500 rounded-bl-xl text-xs font-bold"
+              >
+                2018 - 2021
+                <img src="imgs/EISHCMlogo.png" alt="EIS HCM" class="inline-block w-6 h-6 ml-1"/>
+              </div>
+              <h4 class="text-lg font-bold">High School Diploma | IB Diploma</h4>
+              <p class="text-pink-500 font-medium">
+                European International School Ho Chi Minh City, Vietnam
+              </p>
+              <!-- <p class="text-sm mt-2 text-gray-600">
+                
+              </p> -->
+            </div>
+            <div class="glass-card p-6 relative">
+              <div
+                class="absolute top-0 right-0 p-2 bg-blue-100 text-blue-500 rounded-bl-xl text-xs font-bold"
+              >
+                Completed
+              </div>
+              <!-- <h4 class="text-lg font-bold">Web Design Certification</h4>
+              <p class="text-blue-400 font-medium">Design Academy Online</p> -->
+            </div>
+
+        <!-- Experience -->
+        <div>
+          <h2 class="text-3xl font-bold mb-8 gradient-text cursive">
+            My Journey 🚀
+          </h2>
+          <div class="space-y-6">
+            <div class="glass-card p-6 flex gap-4">
+              <div
+                class="flex-shrink-0 w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center text-pink-500"
+              >
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold">Full-Stack developer Intern</h4>
+                <p class="text-gray-500 italic text-sm">
+                  NGSC Vietnam | March 2025 - September 2025
+                </p>
+                <ul class="list-disc list-inside text-sm mt-2 text-gray-600">
+                  <li>What I did: API development, data optimization, frontend integration</li>
+                  <li></li>Scale: 150M+ financial records</li>
+                  <li>Impact: Faster queries, smaller storage footprint, smoother UX</li>
+                  <li>What I learned: Optimization is a team sport; UX matters as much as algorithms</li>
+                  <li>Tech I used:  Java, Spring Boot, Oracle SQL, REST APIs, JavaScript, React, TypeScript, Git, Postman</li>
+                  <li>During my internship, I worked across a microservices‑based system, building and optimizing REST APIs that handled over 150 million financial records. I improved query performance, reduced storage usage, and refactored services so data could be processed and retrieved more efficiently across the architecture. I also helped fix production issues in both the backend and the web app, and contributed to the frontend by integrating APIs and implementing new features based on team requirements.
+
+The biggest lesson I learned was that optimization isn’t just about algorithms — it’s about communication, consistency across microservices, and designing for real user experience. What seems “efficient” in one service can break another, so collaborating with the team and aligning decisions across the system became just as important as writing clean code.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects & Events -->
+    <section id="projects" class="py-20 px-6 md:px-20 bg-pink-50/50">
+      <h2 class="text-3xl font-bold text-center mb-12 gradient-text cursive">
+        Projects & Events ✨
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="glass-card overflow-hidden flex flex-col h-full">
+          <div
+            class="h-48 bg-pink-200 flex items-center justify-center text-white text-5xl"
+          >
+            <i class="fas fa-cloud-sun-rain"></i>
+          </div>
+          <div class="p-6 flex-grow">
+            <h3 class="text-xl font-bold mb-2">Phishing Email Detector</h3>
+            <p class="text-sm text-gray-600 mb-4">
+              A machine learning model that classifies emails as phishing or legitimate using Logistic Regression, Naive Bayes, Random Forest, and SVM, with preprocessing, feature extraction, and accuracy comparison.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="px-3 py-1 bg-pink-100 text-pink-500 rounded-full text-xs"
+                >Python</span
+              >
+              <span
+                class="px-3 py-1 bg-green-100 text-green-500 rounded-full text-xs"
+                >Pandas</span   
+              >
+              <span
+                class="px-3 py-1 bg-yellow-100 text-yellow-500 rounded-full text-xs"
+                >ML</span
+              >
+              <span
+                class="px-3 py-1 bg-purple-100 text-purple-500 rounded-full text-xs"
+                >Scikit-Learn</span
+              >
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex justify-between">
+            <a
+              href="https://github.com/minhanh0503/phishingemail_detector"
+              target="_blank"
+              class="text-pink-400 hover:text-pink-600 text-sm font-bold flex items-center gap-2"
+            >
+              <i class="fab fa-github"></i> Source
+            </a>
+            <a
+              href="#"
+              class="text-blue-400 hover:text-blue-600 text-sm font-bold flex items-center gap-2"
+            >
+              <i class="fas fa-external-link-alt"></i> Demo
+            </a>
+          </div>
+        </div>
+
+        <!-- Event Card -->
+        <!-- <div
+          class="glass-card overflow-hidden flex flex-col border-dashed border-2 border-pink-300"
+        >
+          <div
+            class="p-6 flex-grow flex flex-col justify-center items-center text-center"
+          >
+            <div
+              class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center text-purple-500 mb-4 text-2xl"
+            >
+              <i class="fas fa-calendar-star"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">CAN-CIWC</h3>
+            <p class="text-sm text-gray-500 italic">Participant & Speaker</p>
+            <p class="text-sm text-gray-600 mt-4 px-4">
+              Presented a project on sustainability and won the "Most Innovative
+              UI" award!
+            </p>
+          </div>
+        </div> -->
+
+        <!-- Project 2 -->
+        <div class="glass-card overflow-hidden flex flex-col h-full">
+          <div
+            class="h-48 bg-blue-100 flex items-center justify-center text-blue-400 text-5xl"
+          >
+            <i class="fas fa-pencil-ruler"></i>
+          </div>
+          <div class="p-6 flex-grow">
+            <h3 class="text-xl font-bold mb-2">Secure S3 Using LocalStack</h3>
+            <p class="text-sm text-gray-600 mb-4">
+              A hands-on security project where I simulated AWS S3 locally using LocalStack. I practiced server-side encryption, versioning, bucket policies, and presigned URLs — all without touching real AWS resources. Built and tested entirely on Windows PowerShell.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="px-3 py-1 bg-blue-50 text-blue-500 rounded-full text-xs"
+                >Python</span
+              >
+              <span
+                class="px-3 py-1 bg-green-50 text-green-500 rounded-full text-xs"
+                >Boto3</span
+              >
+              <span
+                class="px-3 py-1 bg-green-50 text-green-500 rounded-full text-xs"
+                >LocalStack</span
+              >
+              <span
+                class="px-3 py-1 bg-green-50 text-green-500 rounded-full text-xs"
+                >AWS S3</span
+              >
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex justify-between">
+            <a
+              href="https://github.com/minhanh0503/Secure-S3-using-localstack"
+              target="_blank"
+              class="text-pink-400 hover:text-pink-600 text-sm font-bold flex items-center gap-2"
+            >
+              <i class="fab fa-github"></i> Source
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 text-center border-t border-pink-100">
+      <!-- <p class="cursive text-2xl gradient-text mb-4">Stay Magical ✨</p> -->
+      <div class="flex justify-center space-x-6 mb-6">
+        <a href="mailto:nguyenminhanh290503@gmail.com" class="text-gray-400 hover:text-pink-400 text-xl transition"
+          ><i class="fab fa-envelope"></i
+        ></a>
+        <a href="http://www.linkedin.com/in/minh-anh-nguyen-82968021a" class="text-gray-400 hover:text-pink-400 text-xl transition"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+
+        <a href="https://github.com/minhanh0503" class="text-gray-400 hover:text-pink-400 text-xl transition"
+          ><i class="fab fa-github"></i
+        ></a>
+      </div>
+      <p class="text-xs text-gray-400">
+        &copy; 2025. Hand-coded by Minh Anh Nguyen with 💖
+      </p>
+    </footer>
+
+    <!-- Typing Text -->
+    <h2 id="typing-text"></h2>
+    <!-- Example Cards -->
+    <div class="glass-card">Card 1</div>
+    <div class="glass-card">Card 2</div>
+    <div class="glass-card">Card 3</div>
+    <!-- Mobile Menu Button -->
+    <button onclick="toggleMenu()">Menu</button>
+    <!-- External JS -->
+    <script src="script.js"></script>
+  </body>
 </html>
