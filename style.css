@@ -1,91 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap');
+/* style.css */
 
-        :root {
-            --primary-pink: #ffafcc;
-            --secondary-pink: #ffc8dd;
-            --accent-purple: #cdb4db;
-            --soft-blue: #a2d2ff;
-            --glass-bg: rgba(255, 255, 255, 0.7);
-        }
+:root {
+  --primary-pink: #ffafcc;
+  --secondary-pink: #ffc8dd;
+  --accent-purple: #cdb4db;
+  --soft-blue: #a2d2ff;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+}
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #fef1f2 0%, #fae8ff 50%, #e0f2fe 100%);
-            color: #4a4a4a;
-            scroll-behavior: smooth;
-            overflow-x: hidden;
-        }
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #fef1f2 0%, #fae8ff 50%, #e0f2fe 100%);
+  color: #4a4a4a;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
-        .cursive {
-            font-family: 'Dancing Script', cursive;
-        }
+.cursive {
+  font-family: "Dancing Script", cursive;
+}
 
-        .glass-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            border-radius: 20px;
-            box-shadow: 0 8px 32px rgba(255, 175, 204, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(255, 175, 204, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .glass-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 40px rgba(255, 175, 204, 0.3);
-        }
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(255, 175, 204, 0.3);
+}
 
-        .gradient-text {
-            background: linear-gradient(to right, #ff758c, #ff7eb3);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+.gradient-text {
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
 
-        @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 
-        .nav-link::after {
-            content: '';
-            display: block;
-            width: 0;
-            height: 2px;
-            background: var(--primary-pink);
-            transition: width .3s;
-        }
+.nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--primary-pink);
+  transition: width 0.3s;
+}
 
-        .nav-link:hover::after {
-            width: 100%;
-        }
+.nav-link:hover::after {
+  width: 100%;
+}
 
-        .heart-btn {
-            background: var(--primary-pink);
-            transition: all 0.3s;
-        }
+.heart-btn {
+  background: var(--primary-pink);
+  transition: all 0.3s;
+}
 
-        .heart-btn:hover {
-            background: #ff85a1;
-            transform: scale(1.05);
-        }
+.heart-btn:hover {
+  background: #ff85a1;
+  transform: scale(1.05);
+}
 
-        .custom-shape-divider-bottom {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-        }
+.custom-shape-divider-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
 
-        .custom-shape-divider-bottom svg {
-            position: relative;
-            display: block;
-            width: calc(100% + 1.3px);
-            height: 150px;
-            fill: #ffffff;
-        }
+.custom-shape-divider-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+  fill: #ffffff;
+}
