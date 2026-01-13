@@ -3,7 +3,7 @@
 Welcome to my personal portfolio website!  
 This project showcases my skills, experience, and projects, giving potential employers or collaborators a clear overview of my technical background and creative style.
 
-Built with care, creativity, and a soft aesthetic — because tech doesn’t have to be grey and boring.
+Built with care, creativity, and a soft aesthetic, because tech doesn’t have to be grey and boring.
 
 ---
 
