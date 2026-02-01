@@ -62,6 +62,9 @@ function loop() {
 }
 
 loop();
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("hidden");
+}
 
 // Scroll Reveal effect (simple manual version)
 window.addEventListener("scroll", () => {
