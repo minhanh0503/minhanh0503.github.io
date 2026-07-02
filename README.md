@@ -11,10 +11,10 @@ Built with care, creativity, and a soft aesthetic, because tech doesn’t have t
 
 A handcrafted, responsive portfolio built using:
 
-- **HTML** — the bones 🦴  
-- **TailwindCSS** — the wardrobe 👗  
-- **Custom CSS** — the accessories 🎀  
-- **JavaScript** — the personality ✨  
+- **HTML** — the bones   
+- **TailwindCSS** — the wardrobe   
+- **Custom CSS** — the accessories   
+- **JavaScript** — the personality  
 
 The site includes animations, interactive elements, and a clean layout designed to be both professional and visually charming.
 
