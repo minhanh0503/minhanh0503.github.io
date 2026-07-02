@@ -1,4 +1,4 @@
-# 🌈 My Portfolio Website
+# My Portfolio Website
 
 Welcome to my personal portfolio website!  
 This project showcases my skills, experience, and projects, giving potential employers or collaborators a clear overview of my technical background and creative style.
@@ -7,7 +7,7 @@ Built with care, creativity, and a soft aesthetic, because tech doesn’t have t
 
 ---
 
-## ✨ What This Website Is
+## What This Website Is
 
 A handcrafted, responsive portfolio built using:
 
@@ -24,16 +24,16 @@ The site includes animations, interactive elements, and a clean layout designed 
 
 | Ingredient | Purpose |
 |-----------|--------|
-| 🍬 HTML | Structure & content |
-| 🎀 TailwindCSS | Utility-first styling |
-| 🌸 Custom CSS | Additional styling & polish |
-| ✨ JavaScript | Animations & interactivity |
-| 🎨 Font Awesome | Icons |
-| 🧁 Google Fonts | Poppins & Dancing Script |
+| HTML | Structure & content |
+| TailwindCSS | Utility-first styling |
+| Custom CSS | Additional styling & polish |
+| JavaScript | Animations & interactivity |
+| Font Awesome | Icons |
+| Google Fonts | Poppins & Dancing Script |
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 portfolio/
 │ index.html
@@ -48,7 +48,7 @@ portfolio/
 │ ├── Mockup - 03.png
 │ └── EISHCMClogo.png
 
-## 🚀 How to Run It
+## How to Run It
 
 1. Clone the repository:
    ```bash
@@ -57,7 +57,7 @@ portfolio/
 
 That’s it — no build tools, no setup, just vibes ✨
 
-💌 Let’s Connect
+ Let’s Connect
 
 Email: nguyenminhanh290503@gmail.com
 
